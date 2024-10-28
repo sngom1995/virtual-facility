@@ -7,13 +7,13 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { WorkflowService } from './workflow.service';
+import { WorkflowsService } from './workflow.service';
 import { CreateWorkflowDto } from './dto/create-workflow.dto';
 import { UpdateWorkflowDto } from './dto/update-workflow.dto';
 
 @Controller('workflows')
 export class WorkflowController {
-  constructor(private readonly workflowService: WorkflowService) {}
+  constructor(private readonly workflowService: WorkflowsService) {}
 
   @Post()
   create(@Body() createWorkflowDto: CreateWorkflowDto) {
